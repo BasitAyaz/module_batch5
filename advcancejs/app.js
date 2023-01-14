@@ -3,15 +3,12 @@
 
 // ES6 Topics
 
-// {date : 17-12-2022}
 // var,let,const
 // hoisting
 // Template Literals
 // ternary operators
 // Circuits
-// Object Methods
-
-// {date : 24-12-2022}
+// Object Methods (keys,values,freez,entries)
 // spread Operators
 // rest operators
 // destructuring
@@ -362,7 +359,6 @@
 // let a = { ...obj };
 
 // === Promise ===
-
 // let AbdullahKaRishta = new Promise(function (resolve, reject) {
 //   if (
 //     abdullahKijob == true &&
@@ -374,7 +370,6 @@
 //     reject("Dusra Dhondo");
 //   }
 // });
-
 // AbdullahKaRishta.then((success) => {
 //   console.log(success);
 // }).catch((err) => {
@@ -409,3 +404,145 @@
 // }
 
 // xyz(abc());
+
+// function abc() {
+//   console.log("A");
+//   return function () {
+//     console.log("B");
+//   };
+// }
+
+// abc()();
+
+// function abc(a = "value not passed") {
+//   console.log(a);
+// }
+
+// abc("any Value");
+// abc();
+
+// let a = 10;
+
+// function abc() {
+//   console.log(a);
+// }
+// abc();
+
+// let abc = function (a) {
+//   console.log(a);
+//   return a;
+// };
+
+// let xyz = a => {
+//   console.log(a);
+// };
+// let xyz = (a) => "jakshdjk";
+
+// let val = xyz(10);
+
+// === Array Functions ===
+
+// let arr = [
+//   {
+//     id: 1,
+//     name: "ABC",
+//     category: "A",
+//   },
+//   {
+//     id: 2,
+//     name: "ABC",
+//     category: "A",
+//   },
+//   {
+//     id: 3,
+//     name: "ABC",
+//     category: "B",
+//   },
+//   {
+//     id: 4,
+//     name: "ABC",
+//     category: "C",
+//   },
+//   {
+//     id: 5,
+//     name: "ABC",
+//     category: "B",
+//   },
+// ];
+
+// arr.forEach((x, i) => {
+//   x.inst = "SAIMS";
+//   console.log(x, i);
+// });
+
+// let ab = arr.map((x) => {
+//   if (x.category == "A") {
+//     return x;
+//   }
+// });
+
+// console.log(ab);
+
+// let catA = arr.filter((x, i, list) => {
+//   if (x.category == "C") {
+//     return x;
+//   }
+// });
+// let catA = arr.filter((x, i, list) => x.category == "A");
+// console.log(catA);
+
+// let status = arr.some((x) => x.id == 5);
+// console.log(status);
+
+// let obj = arr.find((x) => x.id == 3);
+// console.log(obj);
+
+// let i = arr.findIndex((x) => x.id == 3);
+// console.log(i);
+
+// let a = arr.reduce((x, y) => console.log(x, y));
+// console.log(a);
+
+// let b = ["a", "b", "c", ["d", "e", "c"]];
+
+// b = b.flat(3);
+
+// console.log(b);
+
+let arr = [
+  {
+    brand: "samsung",
+    model: "a30",
+    ram: "4gb",
+    camera: "50px",
+    price: 2000,
+  },
+  {
+    brand: "samsung",
+    model: "a30",
+    ram: "4gb",
+    camera: "50px",
+    price: 2000,
+  },
+  {
+    brand: "samsung",
+    model: "a30",
+    ram: "4gb",
+    camera: "50px",
+    price: 2000,
+  },
+];
+
+let searchBy = document.getElementById("searchBy");
+let searchval = document.getElementById("searchval");
+
+function init() {
+  let options = Object.keys(arr[0]);
+  options.forEach((x) => (searchBy.innerHTML += `<option>${x}</option>`));
+}
+init();
+
+function searchM() {
+  let myArr = arr.filter((x) => x[searchBy.value] == searchval.value);
+  console.log(myArr);
+}
