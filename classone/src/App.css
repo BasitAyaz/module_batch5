@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+.main_div{
+  text-align: center;
+}
+.main_head{
+font-size: 2rem;
+}
+.para{
+  font-size: 1rem;
+  color: white;
+}
+.marks{
+  margin-top: -2%;
+}
+.statusParent{
+  position: relative;
+}
+.statusThumb{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  opacity: .3;
+}
