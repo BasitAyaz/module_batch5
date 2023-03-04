@@ -36,26 +36,40 @@
     transform: rotate(360deg);
   }
 }
-.main_div{
+.main_div {
   text-align: center;
 }
-.main_head{
-font-size: 2rem;
+.main_head {
+  font-size: 2rem;
 }
-.para{
+.para {
   font-size: 1rem;
   color: white;
 }
-.marks{
+.marks {
   margin-top: -2%;
 }
-.statusParent{
+.statusParent {
   position: relative;
 }
-.statusThumb{
+.statusThumb {
   position: absolute;
   top: 0;
   left: 0;
   height: 15px;
-  opacity: .3;
+  opacity: 0.3;
+}
+.searchInp {
+  padding: 10px;
+  font-size: 1em;
+  border: none;
+}
+.searchSelect {
+  padding: 10px;
+  font-size: 1em;
+  border: none;
+  background-color: transparent;
+}
+.searchBox {
+  width: 450px;
 }

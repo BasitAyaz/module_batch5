@@ -1,13 +1,14 @@
 import { Button, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { useState } from "react";
-import { loginUser } from "../config/firebasemethods";
+import { signUpUser } from "../config/firebasemethods";
 
-function Login() {
+function Signup() {
   const [model, setModel] = useState({});
 
-  let signIn = () => {
-    loginUser(model)
+  let createUser = () => {
+    console.log(model);
+    signUpUser(model)
       .then((res) => {
         console.log(res);
       })
@@ -23,7 +24,14 @@ function Login() {
         className="d-flex justify-content-center align-items-center "
       >
         <Box>
-          <Typography variant="h3">Login</Typography>
+          <Typography variant="h3">Signup</Typography>
+          <Box className="p-2">
+            <TextField
+              onChange={(e) => setModel({ ...model, userName: e.target.value })}
+              variant="standard"
+              label="Name"
+            />
+          </Box>
           <Box className="p-2">
             <TextField
               onChange={(e) => setModel({ ...model, email: e.target.value })}
@@ -39,8 +47,8 @@ function Login() {
             />
           </Box>
           <Box className="p-2">
-            <Button onClick={signIn} variant="contained">
-              Login
+            <Button onClick={createUser} variant="contained">
+              Signup
             </Button>
           </Box>
         </Box>
@@ -48,4 +56,4 @@ function Login() {
     </>
   );
 }
-export default Login;
+export default Signup;

@@ -4,7 +4,7 @@ import AppRouter from "./config/router";
 
 function App() {
   return (
-    <div>
+    <div className="bg-light">
       <AppRouter />
     </div>
   );
